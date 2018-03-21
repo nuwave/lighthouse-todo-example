@@ -1,0 +1,16 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: String!
+    updated_at: String!
+}
+
+type Query {
+    me: User @auth
+}
+
+type Mutation {
+    updateAccount(name: String email: String @validate(rules: ["email"])): User
+        @field(class: "App\\Http\\GraphQL\\Mutations\\AccountMutator" method: "update")
+}
