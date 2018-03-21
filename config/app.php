@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Nuwave\Lighthouse\Providers\LighthouseServiceProvider::class,
 
         /*
          * Application Service Providers...
