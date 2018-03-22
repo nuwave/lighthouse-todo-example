@@ -5,4 +5,5 @@ type Job {
   updated_at: String!
 
   user: User! @belongsTo
+  tasks: [Task!]! @hasMany
 }

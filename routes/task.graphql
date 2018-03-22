@@ -6,4 +6,5 @@ type Task {
 
   job: Job! @belongsTo
   completed_by: User @belongsTo(relation: "completedBy")
+  users: [User!]! @hasMany
 }
