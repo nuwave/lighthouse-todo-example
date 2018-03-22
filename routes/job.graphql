@@ -1,0 +1,8 @@
+type Job {
+  id: ID!
+  title: String!
+  created_at: String!
+  updated_at: String!
+
+  user: User! @belongsTo
+}

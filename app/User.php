@@ -40,7 +40,7 @@ class User extends Authenticatable
     /**
      * Tasks assigned to user.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToManyk
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tasks()
     {

@@ -1,13 +1,19 @@
+#import ./task.graphql
+#import ./job.graphql
+
 type User {
     id: ID!
     name: String!
     email: String!
     created_at: String!
     updated_at: String!
+
+    tasks: [Task!]! @hasMany(type: "paginator")
+    jobs: [Job!]! @hasMany
 }
 
 type Query {
-    me: User @auth
+    me: User @auth # we're currently faking auth w/ middleware, but Passport work quite well here
 }
 
 type Mutation {

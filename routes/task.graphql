@@ -1,0 +1,9 @@
+type Task {
+  id: ID!
+  title: String!
+  created_at: String!
+  updated_at: String!
+
+  job: Job! @belongsTo
+  completed_by: User @belongsTo(relation: "completedBy")
+}
